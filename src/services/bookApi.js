@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// Your Express backend URL
-const API_URL = "http://localhost:5000/api/Books";
+// API URL from environment variable (works on localhost & Vercel)
+const API_URL = import.meta.env.VITE_API_URL + "/api/Books";
 
 // Helper to get auth token from localStorage
 const getAuthToken = () => {

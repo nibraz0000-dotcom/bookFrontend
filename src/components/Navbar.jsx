@@ -12,19 +12,19 @@ export const Navbar = () => {
   };
 
   return (
-    <header className="bg-deepgreen shadow-lg sticky top-4 z-50 mx-4 md:mx-8 rounded-full" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
+    <header className="bg-dusty-blue shadow-lg sticky top-4 z-50 mx-4 md:mx-8 rounded-full" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
         <div className="container mx-auto px-6 py-4">
             <div className="flex justify-between items-center">
                 <Link to='/' className="flex items-center space-x-2">
                     <span className="text-3xl">☺</span>
-                    <span className="text-2xl font-bold text-forest">BOOK</span>
+                    <span className="text-2xl font-bold text-navy">BOOK</span>
                 </Link>
                 <nav>
                     <ul className="flex space-x-6 items-center">
                         <li>
                             <Link 
                                 to='/' 
-                                className="text-forest hover:text-black transition-colors duration-300 font-medium"
+                                className="text-navy hover:text-black transition-colors duration-300 font-medium"
                             >
                                 Home
                             </Link>
@@ -32,7 +32,7 @@ export const Navbar = () => {
                         <li>
                             <Link 
                                 to='/allBooks' 
-                                className="text-forest hover:text-black transition-colors duration-300 font-medium"
+                                className="text-navy hover:text-black transition-colors duration-300 font-medium"
                             >
                                 All Books
                             </Link>
@@ -43,7 +43,7 @@ export const Navbar = () => {
                               <li>
                                 <Link 
                                   to='/admin' 
-                                  className="text-forest hover:text-black transition-colors duration-300 font-medium"
+                                  className="text-navy hover:text-black transition-colors duration-300 font-medium"
                                 >
                                   Admin Panel
                                 </Link>
@@ -52,21 +52,21 @@ export const Navbar = () => {
                             <li className="relative">
                               <button
                                 onClick={() => setShowDropdown(!showDropdown)}
-                                className="flex items-center space-x-2 text-forest hover:text-black transition-colors duration-300 font-medium"
+                                className="flex items-center space-x-2 text-navy hover:text-black transition-colors duration-300 font-medium"
                               >
-                                <div className="w-8 h-8 rounded-full bg-forest flex items-center justify-center text-cream font-bold">
+                                <div className="w-8 h-8 rounded-full bg-soft-blue flex items-center justify-center text-ice-white font-bold">
                                   {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
                                 </div>
                               </button>
                               {showDropdown && (
-                                <div className="absolute right-0 mt-2 w-48 bg-cream rounded-md shadow-lg py-2 z-50">
-                                  <div className="px-4 py-2 border-b border-sand">
-                                    <p className="text-sm font-medium text-forest">{user.name || 'User'}</p>
-                                    <p className="text-xs text-forest">{user.email}</p>
+                                <div className="absolute right-0 mt-2 w-48 bg-ice-white rounded-md shadow-lg py-2 z-50">
+                                  <div className="px-4 py-2 border-b border-light-blue">
+                                    <p className="text-sm font-medium text-navy">{user.name || 'User'}</p>
+                                    <p className="text-xs text-navy">{user.email}</p>
                                   </div>
                                   <button
                                     onClick={handleLogout}
-                                    className="block w-full text-left px-4 py-2 text-sm text-forest hover:bg-sand"
+                                    className="block w-full text-left px-4 py-2 text-sm text-navy hover:bg-light-blue"
                                   >
                                     Logout
                                   </button>
@@ -79,7 +79,7 @@ export const Navbar = () => {
                             <li>
                                 <Link 
                                     to='/login' 
-                                    className="text-forest hover:text-black transition-colors duration-300 font-medium"
+                                    className="text-navy hover:text-black transition-colors duration-300 font-medium"
                                 >
                                     Login
                                 </Link>
@@ -87,7 +87,7 @@ export const Navbar = () => {
                             <li>
                                 <Link 
                                     to='/register' 
-                                    className="text-forest hover:text-black transition-colors duration-300 font-medium"
+                                    className="text-navy hover:text-black transition-colors duration-300 font-medium"
                                 >
                                     Register
                                 </Link>

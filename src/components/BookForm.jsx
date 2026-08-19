@@ -82,7 +82,7 @@ export const BookForm = ({ onSubmit, initialData }) => {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-forest mb-2">
+        <label className="block text-sm font-medium text-navy mb-2">
           Book Title
         </label>
         <input
@@ -91,13 +91,13 @@ export const BookForm = ({ onSubmit, initialData }) => {
           placeholder="Enter book title"
           value={formData.title}
           onChange={handleChange}
-          className="w-full px-4 py-2 border border-forest rounded-lg focus:ring-2 focus:ring-forest focus:border-transparent bg-cream text-black placeholder-forest"
+          className="w-full px-4 py-2 border border-soft-blue rounded-lg focus:ring-2 focus:ring-soft-blue focus:border-transparent bg-ice-white text-black placeholder-soft-blue"
           required
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-forest mb-2">
+        <label className="block text-sm font-medium text-navy mb-2">
           Author
         </label>
         <input
@@ -106,13 +106,13 @@ export const BookForm = ({ onSubmit, initialData }) => {
           placeholder="Enter author name"
           value={formData.author}
           onChange={handleChange}
-          className="w-full px-4 py-2 border border-forest rounded-lg focus:ring-2 focus:ring-forest focus:border-transparent bg-cream text-black placeholder-forest"
+          className="w-full px-4 py-2 border border-soft-blue rounded-lg focus:ring-2 focus:ring-soft-blue focus:border-transparent bg-ice-white text-black placeholder-soft-blue"
           required
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-forest mb-2">
+        <label className="block text-sm font-medium text-navy mb-2">
           Price (₹)
         </label>
         <input
@@ -121,14 +121,14 @@ export const BookForm = ({ onSubmit, initialData }) => {
           placeholder="Enter price"
           value={formData.price}
           onChange={handleChange}
-          className="w-full px-4 py-2 border border-forest rounded-lg focus:ring-2 focus:ring-forest focus:border-transparent bg-cream text-black placeholder-forest"
+          className="w-full px-4 py-2 border border-soft-blue rounded-lg focus:ring-2 focus:ring-soft-blue focus:border-transparent bg-ice-white text-black placeholder-soft-blue"
           required
           min="0"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-forest mb-2">
+        <label className="block text-sm font-medium text-navy mb-2">
           Stock
         </label>
         <input
@@ -137,21 +137,21 @@ export const BookForm = ({ onSubmit, initialData }) => {
           placeholder="Enter stock quantity"
           value={formData.stock}
           onChange={handleChange}
-          className="w-full px-4 py-2 border border-forest rounded-lg focus:ring-2 focus:ring-forest focus:border-transparent bg-cream text-black placeholder-forest"
+          className="w-full px-4 py-2 border border-soft-blue rounded-lg focus:ring-2 focus:ring-soft-blue focus:border-transparent bg-ice-white text-black placeholder-soft-blue"
           required
           min="0"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-forest mb-2">
+        <label className="block text-sm font-medium text-navy mb-2">
           Select Book Image
         </label>
         <select
           name="image"
           value={formData.image}
           onChange={handleChange}
-          className="w-full px-4 py-2 border border-forest rounded-lg focus:ring-2 focus:ring-forest focus:border-transparent bg-cream text-black"
+          className="w-full px-4 py-2 border border-soft-blue rounded-lg focus:ring-2 focus:ring-soft-blue focus:border-transparent bg-ice-white text-black"
         >
           {bookImages.map((img) => (
             <option key={img.value} value={img.value}>
@@ -162,7 +162,7 @@ export const BookForm = ({ onSubmit, initialData }) => {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-forest mb-2">
+        <label className="block text-sm font-medium text-navy mb-2">
           Or enter custom image URL
         </label>
         <input
@@ -171,23 +171,23 @@ export const BookForm = ({ onSubmit, initialData }) => {
           placeholder="https://example.com/image.jpg"
           value={formData.image}
           onChange={handleChange}
-          className="w-full px-4 py-2 border border-forest rounded-lg focus:ring-2 focus:ring-forest focus:border-transparent bg-cream text-black placeholder-forest"
+          className="w-full px-4 py-2 border border-soft-blue rounded-lg focus:ring-2 focus:ring-soft-blue focus:border-transparent bg-ice-white text-black placeholder-soft-blue"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-forest mb-2">
+        <label className="block text-sm font-medium text-navy mb-2">
           Or upload image from your device
         </label>
         <input
           type="file"
           accept="image/*"
           onChange={handleFileChange}
-          className="w-full px-4 py-2 border border-forest rounded-lg focus:ring-2 focus:ring-forest focus:border-transparent bg-cream text-black"
+          className="w-full px-4 py-2 border border-soft-blue rounded-lg focus:ring-2 focus:ring-soft-blue focus:border-transparent bg-ice-white text-black"
         />
         {imagePreview && (
           <div className="mt-4">
-            <p className="text-sm text-forest mb-2">Preview:</p>
+            <p className="text-sm text-navy mb-2">Preview:</p>
             <img 
               src={imagePreview} 
               alt="Preview" 
@@ -199,7 +199,7 @@ export const BookForm = ({ onSubmit, initialData }) => {
 
       <button 
         type="submit" 
-        className="w-full bg-forest text-cream py-3 rounded-lg hover:bg-deepgreen hover:text-forest transition-colors duration-300 font-medium shadow-md hover:shadow-lg"
+        className="w-full bg-soft-blue text-ice-white py-3 rounded-lg hover:bg-dusty-blue hover:text-navy transition-colors duration-300 font-medium shadow-md hover:shadow-lg"
       >
         Save Book
       </button>

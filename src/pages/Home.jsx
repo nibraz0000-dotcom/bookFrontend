@@ -26,20 +26,20 @@ export const Home = () => {
   const firstFiveBooks = books.slice(0, 5)
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-ice-white">
       {/* Hero Section */}
-      <div className="relative min-h-[500px] flex items-center justify-center bg-cream">
+      <div className="relative min-h-[500px] flex items-center justify-center bg-ice-white">
         {/* Content */}
         <div className="relative z-10 text-center p-8">
-          <h1 className="text-6xl md:text-7xl font-bold text-forest mb-4">
+          <h1 className="text-6xl md:text-7xl font-bold text-navy mb-4">
             📚 Book Store
           </h1>
-          <p className="text-xl md:text-2xl text-forest mb-8">
+          <p className="text-xl md:text-2xl text-navy mb-8">
             Welcome to our Book Store
           </p>
           <Link 
             to="/allBooks" 
-            className="inline-block bg-forest text-cream px-8 py-3 rounded-lg hover:bg-deepgreen hover:text-forest transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            className="inline-block bg-soft-blue text-ice-white px-8 py-3 rounded-lg hover:bg-dusty-blue hover:text-navy transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             View All Books
           </Link>
@@ -48,16 +48,16 @@ export const Home = () => {
 
       {/* First Five Books Section */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-4xl font-bold text-center text-forest mb-4">
+        <h2 className="text-4xl font-bold text-center text-navy mb-4">
           Featured Books
         </h2>
-        <p className="text-center text-forest mb-12">
+        <p className="text-center text-navy mb-12">
           Discover our latest collection
         </p>
 
         {loading ? (
           <div className="text-center py-12">
-            <p className="text-xl text-forest">Loading books...</p>
+            <p className="text-xl text-navy">Loading books...</p>
           </div>
         ) : (
           <>

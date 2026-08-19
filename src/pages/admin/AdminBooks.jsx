@@ -55,27 +55,27 @@ export const AdminBooks = () => {
   }
 
   return (
-    <div className="min-h-screen bg-cream py-8">
+    <div className="min-h-screen bg-ice-white py-8">
         <div className="container mx-auto px-4">
             <div className="flex justify-between items-center mb-8">
-                <h1 className="text-4xl font-bold text-forest">📚 Manage Books</h1>
+                <h1 className="text-4xl font-bold text-navy">📚 Manage Books</h1>
                 <Link 
                     to="/admin/book/add"
-                    className="bg-forest text-cream px-6 py-3 rounded-lg hover:bg-deepgreen hover:text-forest transition-colors duration-300 shadow-md hover:shadow-lg"
+                    className="bg-soft-blue text-ice-white px-6 py-3 rounded-lg hover:bg-dusty-blue hover:text-navy transition-colors duration-300 shadow-md hover:shadow-lg"
                 >
                     ➕ Add Book
                 </Link>
             </div>
 
             {books.length === 0 ? (
-                <div className="text-center py-12 bg-sand rounded-lg shadow">
-                    <p className="text-xl text-forest">No books found.</p>
+                <div className="text-center py-12 bg-light-blue rounded-lg shadow">
+                    <p className="text-xl text-navy">No books found.</p>
                 </div>
             ) : (
-                <div className="bg-sand rounded-lg shadow overflow-hidden">
+                <div className="bg-light-blue rounded-lg shadow overflow-hidden">
                     <div className="overflow-x-auto">
                         <table className="w-full">
-                            <thead className="bg-deepgreen text-forest">
+                            <thead className="bg-dusty-blue text-navy">
                                 <tr>
                                     <th className="px-6 py-3 text-left text-sm font-semibold">Title</th>
                                     <th className="px-6 py-3 text-left text-sm font-semibold">Author</th>
@@ -84,18 +84,18 @@ export const AdminBooks = () => {
                                     <th className="px-6 py-3 text-left text-sm font-semibold">Actions</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-forest">
+                            <tbody className="divide-y divide-soft-blue">
                                 {books.map((book) => (
-                                    <tr key={book._id} className="hover:bg-cream transition-colors">
+                                    <tr key={book._id} className="hover:bg-ice-white transition-colors">
                                         <td className="px-6 py-4 text-sm text-black">{book.title}</td>
-                                        <td className="px-6 py-4 text-sm text-forest">{book.author}</td>
+                                        <td className="px-6 py-4 text-sm text-navy">{book.author}</td>
                                         <td className="px-6 py-4 text-sm font-semibold text-black">₹{book.price}</td>
-                                        <td className="px-6 py-4 text-sm text-forest">{book.stock} units</td>
+                                        <td className="px-6 py-4 text-sm text-navy">{book.stock} units</td>
                                         <td className="px-6 py-4 text-sm">
                                             <div className="flex space-x-3">
                                                 <Link
                                                     to={`/admin/book/edit/${book._id}`}
-                                                    className="text-forest hover:text-black font-medium"
+                                                    className="text-navy hover:text-black font-medium"
                                                 >
                                                     ✏️ Edit
                                                 </Link>

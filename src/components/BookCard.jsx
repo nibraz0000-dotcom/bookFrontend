@@ -19,8 +19,8 @@ export const BookCard = ({ book, index }) => {
   const defaultImage = "/images/books/Book5.png"
 
   return (
-    <div className="bg-sand rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
-        <div className="h-48 overflow-hidden bg-cream">
+    <div className="bg-light-blue rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+        <div className="h-48 overflow-hidden bg-ice-white">
             <img 
                 src={bookImage} 
                 alt={book.title}
@@ -37,7 +37,7 @@ export const BookCard = ({ book, index }) => {
             <p className="text-black text-sm mb-4">Stock: {book.stock} units</p>
             <Link 
                 to={`/book/${book._id}`}
-                className="block w-full bg-forest text-cream text-center py-2 rounded-lg hover:bg-deepgreen hover:text-forest transition-colors duration-300 mt-auto"
+                className="block w-full bg-soft-blue text-ice-white text-center py-2 rounded-lg hover:bg-dusty-blue hover:text-navy transition-colors duration-300 mt-auto"
             >
                 View Details
             </Link>

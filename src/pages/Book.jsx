@@ -66,9 +66,9 @@ export const Book = () => {
   }
 
   return (
-    <div className="min-h-screen bg-cream py-8">
+    <div className="min-h-screen bg-ice-white py-8">
         <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold text-forest mb-8 text-center">All Books</h1>
+            <h1 className="text-4xl font-bold text-navy mb-8 text-center">All Books</h1>
             
             {/* Search Bar */}
             <form onSubmit={handleSearch} className="mb-8 max-w-2xl mx-auto">
@@ -78,11 +78,11 @@ export const Book = () => {
                         placeholder="Search books by title or author..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="flex-1 px-4 py-3 border border-forest rounded-lg focus:ring-2 focus:ring-forest focus:border-transparent bg-sand text-black placeholder-forest"
+                        className="flex-1 px-4 py-3 border border-soft-blue rounded-lg focus:ring-2 focus:ring-soft-blue focus:border-transparent bg-light-blue text-black placeholder-soft-blue"
                     />
                     <button
                         type="submit"
-                        className="bg-forest text-cream px-6 py-3 rounded-lg hover:bg-deepgreen hover:text-forest transition-colors duration-300 font-medium shadow-md hover:shadow-lg"
+                        className="bg-soft-blue text-ice-white px-6 py-3 rounded-lg hover:bg-dusty-blue hover:text-navy transition-colors duration-300 font-medium shadow-md hover:shadow-lg"
                     >
                         Search
                     </button>
@@ -91,7 +91,7 @@ export const Book = () => {
 
             {books.length === 0 ? (
                 <div className="text-center py-12">
-                    <p className="text-xl text-forest">No Books Found</p>
+                    <p className="text-xl text-navy">No Books Found</p>
                 </div>
                 ):(
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
