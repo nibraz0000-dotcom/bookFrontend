@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // API URL from environment variable (works on localhost & Vercel)
-const API_URL = (import.meta.env.VITE_API_URL || "https://backend-byfv.onrender.com") + "/api/auth";
+const API_URL = import.meta.env.VITE_API_URL + "/api/auth";
 
 // Register user
 export const register = async (userData) => {
